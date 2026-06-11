@@ -1,0 +1,107 @@
+{
+  "pansou_url": {
+    "description": "PanSou 服务地址",
+    "type": "string",
+    "default": "https://so.252035.xyz/",
+    "hint": "填写 PanSou 服务的完整 URL 地址。默认为公开实例 https://so.252035.xyz/，可替换为自建实例地址。"
+  },
+  "results_per_page": {
+    "description": "每页显示结果数",
+    "type": "int",
+    "default": 10,
+    "slider": {
+      "min": 5,
+      "max": 30,
+      "step": 1
+    },
+    "hint": "设置每次搜索返回的每页结果数量。增加数值可减少翻页频率，但可能增加加载时间。"
+  },
+  "default_source": {
+    "description": "默认搜索来源",
+    "type": "string",
+    "default": "all",
+    "options": ["all", "tg", "plugin"],
+    "labels": ["全部来源", "仅 Telegram", "仅插件"],
+    "hint": "选择默认搜索时从哪些渠道获取结果。全部来源包含 Telegram 和插件两处。"
+  },
+  "default_cloud_types": {
+    "description": "默认筛选盘类型",
+    "type": "list",
+    "default": [
+      "baidu",
+      "aliyun",
+      "quark",
+      "tianyi",
+      "115",
+      "xunlei",
+      "uc",
+      "123",
+      "pikpak",
+      "mobile",
+      "magnet",
+      "ed2k",
+      "guangya"
+    ],
+    "options": [
+      "baidu",
+      "aliyun",
+      "quark",
+      "tianyi",
+      "115",
+      "xunlei",
+      "uc",
+      "123",
+      "pikpak",
+      "mobile",
+      "magnet",
+      "ed2k",
+      "guangya"
+    ],
+    "labels": [
+      "百度网盘",
+      "阿里云盘",
+      "夸克网盘",
+      "天翼云盘",
+      "115网盘",
+      "迅雷云盘",
+      "UC网盘",
+      "123云盘",
+      "PikPak",
+      "移动云盘",
+      "磁力链接",
+      "电驴链接",
+      "光鸭网盘"
+    ],
+    "hint": "选择需要搜索的网盘类型。不勾选的类型将不会出现在搜索结果中。"
+  },
+  "default_exclude_keywords": {
+    "description": "全局排除关键词",
+    "type": "list",
+    "default": [],
+    "hint": "填写需要排除的关键词，每行一个。包含这些关键词的搜索结果将被自动过滤。"
+  },
+  "auto_check_links": {
+    "description": "搜索后自动检测链接有效性",
+    "type": "bool",
+    "default": false,
+    "hint": "启用后，搜索时将自动检测链接有效性。开启后列表中仅显示至少有一条有效链接的条目，详情页会隐藏已失效的链接。"
+  },
+  "auth_username": {
+    "description": "登录用户名",
+    "type": "string",
+    "default": "",
+    "hint": "PanSou 服务端开启了 AUTH_ENABLED 时，填写登录用户名。留空表示不启用身份验证。"
+  },
+  "auth_password": {
+    "description": "登录密码",
+    "type": "string",
+    "default": "",
+    "hint": "PanSou 服务端开启了 AUTH_ENABLED 时，填写对应的登录密码。"
+  },
+  "proxy": {
+    "description": "HTTP 代理",
+    "type": "string",
+    "default": "",
+    "hint": "设置 HTTP 代理地址，如 http://127.0.0.1:7890。留空表示不使用代理。"
+  }
+}
